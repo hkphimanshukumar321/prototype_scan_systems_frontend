@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useSocket } from '@/contexts/SocketContext';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { useSocket } from '../contexts/SocketContext';
+import { Card } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
 import { 
   Activity, 
   ArrowDownCircle, 
@@ -14,9 +14,9 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { cn, formatTime, formatDateTime } from '@/lib/utils';
+import { cn, formatTime, formatDateTime } from '../lib/utils';
 import axios from 'axios';
-import { useAuth } from '@/contexts/AuthContext';
+import { useAuth } from '../contexts/AuthContext';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
