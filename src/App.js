@@ -1,21 +1,27 @@
 import React from 'react';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from '@/contexts/AuthContext';
-import { SocketProvider } from '@/contexts/SocketContext';
+
+import { AuthProvider, useAuth } from './contexts/AuthContext';
+import { SocketProvider } from './contexts/SocketContext';
+
 import { Toaster } from 'sonner';
-import { DashboardLayout } from '@/components/DashboardLayout';
-import { Login } from '@/pages/Login';
-import { Register } from '@/pages/Register';
-import { Profile } from '@/pages/Profile';
-import { Dashboard } from '@/pages/Dashboard';
-import { Analytics } from '@/pages/Analytics';
-import { Users } from '@/pages/Users';
-import { Vehicles } from '@/pages/Vehicles';
-import { Gates } from '@/pages/Gates';
-import { Logs } from '@/pages/Logs';
-import { Settings } from '@/pages/Settings';
-import { Scan } from '@/pages/Scan';
-import '@/index.css';
+
+import { DashboardLayout } from './components/DashboardLayout';
+
+import { Login } from './pages/Login';
+import { Register } from './pages/Register';
+import { Profile } from './pages/Profile';
+import { Dashboard } from './pages/Dashboard';
+import { Analytics } from './pages/Analytics';
+import { Users } from './pages/Users';
+import { Vehicles } from './pages/Vehicles';
+import { Gates } from './pages/Gates';
+import { Logs } from './pages/Logs';
+import { Settings } from './pages/Settings';
+import { Scan } from './pages/Scan';
+
+import './index.css';
+
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();

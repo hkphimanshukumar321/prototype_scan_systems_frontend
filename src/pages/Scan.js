@@ -2,12 +2,12 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 
-import { useAuth } from '@/contexts/AuthContext';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { useAuth } from '../contexts/AuthContext';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Label } from '../components/ui/label';
+import { Input } from '../components/ui/input';
+import { Alert, AlertDescription, AlertTitle } from '../components/ui/alert';
 
 // Gate QR formats supported:
 // 1) JSON: {"gate_id":"GATE-1","location":"Main Gate"}
